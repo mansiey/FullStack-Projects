@@ -7,7 +7,6 @@ import { createHmac, randomBytes } from 'node:crypto';
 import { createUserToken } from './utils/tokens.js';
 
 
-
 class AuthenticationController {
     public async handleSignup(req:Request, res: Response) {
         const validationResult = await signupPayloadModel.safeParseAsync(req.body);
