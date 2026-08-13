@@ -52,7 +52,9 @@ class createGameController {
 
     }
 
-
+    public async handleLeaderBoard(req: Request, res: Response){
+       
+    }
 }
 
 export default createGameController;
