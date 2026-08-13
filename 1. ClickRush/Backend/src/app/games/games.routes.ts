@@ -9,3 +9,5 @@ const gamesController = new createGameController();
 export const gameRouter: Router = express.Router();
 
 gameRouter.post('/', restrictToAuthenticatedUser(), gamesController.handleGameCreation.bind(gamesController));
+
+gameRouter.get('/', restrictToAuthenticatedUser(), gamesController.handleGetGames.bind(gamesController));
