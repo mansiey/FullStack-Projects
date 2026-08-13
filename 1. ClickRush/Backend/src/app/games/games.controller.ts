@@ -24,6 +24,11 @@ class createGameController {
         const result = await db.insert(gamesTable).values({
             userId,
             score
+        }).returning();
+
+        return res.status(200).json({
+            message: "Score added successfully",
+            game: result[0]
         })
     }
 }
