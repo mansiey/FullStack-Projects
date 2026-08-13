@@ -15,6 +15,13 @@
       "when": 1786521123046,
       "tag": "0001_lush_martin_li",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1786606149984,
+      "tag": "0002_sudden_boomer",
+      "breakpoints": true
     }
   ]
 }
