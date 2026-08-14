@@ -4,6 +4,7 @@ import { authRouter } from './auth/routes.js';
 import { authMiddleware } from './middleware/auth-middleware.js';
 import { gameRouter } from './games/games.routes.js';
 import { userRouter } from './users/users.routes.js';
+import { leaderboardRouter } from './leaderboard/leaderboard.routes.js';
 
 export function createApplication() : Express {
     const app = express();
@@ -21,6 +22,7 @@ export function createApplication() : Express {
     app.use('/auth', authRouter);
     app.use('/games', gameRouter);
     app.use('/users', userRouter);
+    app.use('/leaderboard', leaderboardRouter);
 
 
 
