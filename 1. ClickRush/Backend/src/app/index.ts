@@ -5,9 +5,17 @@ import { authMiddleware } from './middleware/auth-middleware.js';
 import { gameRouter } from './games/games.routes.js';
 import { userRouter } from './users/users.routes.js';
 import { leaderboardRouter } from './leaderboard/leaderboard.routes.js';
+import cors from 'cors';
 
 export function createApplication() : Express {
     const app = express();
+
+    //cors middleware
+    app.use(
+        cors({
+            origin: "http://localhost:5173"
+        })
+    );
 
     //middlewares 
     app.use(express.json());
@@ -23,8 +31,5 @@ export function createApplication() : Express {
     app.use('/games', gameRouter);
     app.use('/users', userRouter);
     app.use('/leaderboard', leaderboardRouter);
-
-
-
     return app;
 }
