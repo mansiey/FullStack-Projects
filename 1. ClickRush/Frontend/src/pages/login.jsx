@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';    //React Router hook that lets JavaScript navigate to another route
 
 function Login() {
     const [formData, setFormData] = useState({
@@ -15,6 +16,8 @@ function Login() {
         })
     }
 
+    const navigate = useNavigate();
+
     async function handleSubmit(event) {
         event.preventDefault();
 
@@ -30,6 +33,13 @@ function Login() {
             const data = await response.json();
             console.log("Status: ", response.status);
             console.log("Response: ", data);
+
+            if(response.ok) {
+                const token = data.data.token;
+                localStorage.setItem("token: ", token);
+
+                navigate("/games");
+            }
         } catch (error) {
             console.log("Login failed: ", error)
         }
