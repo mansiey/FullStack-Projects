@@ -4,7 +4,7 @@ import { authRouter } from './auth/routes.js';
 import { authMiddleware } from './middleware/auth-middleware.js';
 import { gameRouter } from './games/games.routes.js';
 import { userRouter } from './users/users.routes.js';
-import { leaderboardRouter } from './leaderboard/leaderboard.routes.js';
+import { leaderboardRouter } from './leaderboards/leaderboard.routes.js';
 import cors from 'cors';
 
 export function createApplication() : Express {
