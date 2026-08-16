@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';    //React Router hook that lets JavaScript navigate to another route
+import { useAuth } from "../context/authContext";
 
 function Login() {
     const [formData, setFormData] = useState({
@@ -17,6 +18,7 @@ function Login() {
     }
 
     const navigate = useNavigate();
+    const { login } = useAuth();
 
     async function handleSubmit(event) {
         event.preventDefault();
@@ -36,7 +38,7 @@ function Login() {
 
             if(response.ok) {
                 const token = data.data.token;
-                localStorage.setItem("token: ", token);
+                login(token);
 
                 navigate("/games");
             }
