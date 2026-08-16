@@ -1,0 +1,341 @@
+
+   /* PROFILE PAGE */
+
+
+.profile-page {
+    width: min(820px, 92%);
+    margin: 40px auto;
+    padding: 28px 32px 35px;
+
+    background: #111318;
+    border: 1px solid #252832;
+    border-radius: 14px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+   /* TITLE */
+
+.profile-page > h1 {
+    margin: 0 0 28px;
+
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+
+    color: #f5f5f5;
+}
+
+
+/*    USER INFORMATION */
+
+.profile-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    margin-bottom: 24px;
+}
+
+.profile-info div {
+    padding: 13px 16px;
+
+    background: #181a20;
+    border: 1px solid #292c35;
+    border-radius: 9px;
+
+    transition: border-color 0.2s ease;
+}
+
+.profile-info div:hover {
+    border-color: #3b3e49;
+}
+
+.profile-info h3 {
+    margin: 0 0 5px;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+
+    color: #777d8c;
+}
+
+.profile-info p {
+    margin: 0;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    color: #e8e9ed;
+}
+
+
+   /* SECTION HEADINGS */
+
+.game-stats > h2,
+.leaderboard-rank > h2 {
+    margin: 0 0 12px;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #e8e9ed;
+}
+
+
+   /* GAME STATS */
+
+.game-stats {
+    margin-top: 28px;
+}
+
+.game-stats-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.stat-card {
+    padding: 16px;
+
+    background: #181a20;
+    border: 1px solid #292c35;
+    border-radius: 10px;
+
+    text-align: center;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: #3b3e49;
+}
+
+.stat-card h3 {
+    margin: 0 0 7px;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+
+    color: #777d8c;
+}
+
+.stat-card p {
+    margin: 0;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+   /* LEADERBOARD */
+
+.leaderboard-rank {
+    margin-top: 28px;
+}
+
+.leaderboard-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.leaderboard-card {
+    padding: 15px 12px;
+
+    background: #181a20;
+    border: 1px solid #292c35;
+    border-radius: 10px;
+
+    text-align: center;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.leaderboard-card:hover {
+    transform: translateY(-2px);
+    border-color: #3b3e49;
+}
+
+.leaderboard-card h3 {
+    margin: 0 0 12px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #b8bbc4;
+}
+
+.leaderboard-card p {
+    margin: 5px 0;
+
+    font-size: 12px;
+
+    color: #777d8c;
+}
+
+.leaderboard-card p:first-of-type {
+    margin-bottom: 4px;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+   /* USERNAME */
+
+.profile-username {
+    margin-top: 28px;
+    padding-top: 22px;
+
+    border-top: 1px solid #252832;
+}
+
+.profile-username h3 {
+    margin: 0 0 10px;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+
+    color: #777d8c;
+}
+
+.profile-username form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.profile-username input {
+    width: 220px;
+    padding: 9px 11px;
+
+    background: #0d0f13;
+    border: 1px solid #30333d;
+    border-radius: 7px;
+
+    outline: none;
+
+    color: #ffffff;
+    font-size: 13px;
+
+    transition: border-color 0.2s ease;
+}
+
+.profile-username input:focus {
+    border-color: #666b78;
+}
+
+.profile-username button {
+    padding: 9px 14px;
+
+    background: #eeeeee;
+    color: #111318;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.profile-username button:hover {
+    background: #ffffff;
+    transform: translateY(-1px);
+}
+
+.profile-username button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+   /* MESSAGES */
+
+.success-message {
+    margin-top: 12px;
+
+    text-align: center;
+
+    font-size: 13px;
+    color: #82c88a;
+}
+
+.error-message {
+    margin-top: 12px;
+
+    text-align: center;
+
+    font-size: 13px;
+    color: #d87878;
+}
+
+
+   /* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .profile-page {
+        width: 92%;
+        margin: 25px auto;
+        padding: 24px 18px 30px;
+    }
+
+    .profile-page > h1 {
+        font-size: 27px;
+        margin-bottom: 24px;
+    }
+
+    .profile-info {
+        grid-template-columns: 1fr;
+    }
+
+    .game-stats-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .leaderboard-container {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-username form {
+        flex-direction: column;
+    }
+
+    .profile-username input,
+    .profile-username button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .game-stats-container {
+        grid-template-columns: 1fr;
+    }
+}
