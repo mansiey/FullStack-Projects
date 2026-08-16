@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
-import Login from './pages/login';
-import Signup from './pages/signup';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 import Games from './pages/Games';
+import Leaderboards from './pages/Leaderboards';
 
 function App() {
   return (
@@ -13,11 +14,15 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/games' element={
           <ProtectedRoute>
-             <Games />
+            <Games />
           </ProtectedRoute>
         } />
         <Route path='/profile' element={<h1>Profile</h1>} />
-        <Route path='/leaderboard' element={<h1>Leaderboard</h1>} />
+        <Route path='/leaderboard' element={
+          <ProtectedRoute>
+            <Leaderboards />
+          </ProtectedRoute>
+        } />
 
       </Routes>
     </BrowserRouter>
