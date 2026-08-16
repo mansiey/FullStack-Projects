@@ -7,6 +7,12 @@ const userController = new usersController();
 
 export const userRouter: Router = express.Router();
 
+userRouter.get(
+    '/profile',
+    restrictToAuthenticatedUser(),
+    userController.handleUpdateProfile.bind(userController)
+);
+
 userRouter.patch(
     '/profile',
     restrictToAuthenticatedUser(),
