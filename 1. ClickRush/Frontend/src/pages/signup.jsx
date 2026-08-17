@@ -55,13 +55,13 @@ function Signup() {
             <div className="signup-container">
 
                 <form onSubmit={handleSubmit}>
-                    <input type="text" name="firstName" placeholder="firstName" value={formData.firstName} onChange={handleChange} />
+                    <input type="text" name="firstName" placeholder="FirstName" value={formData.firstName} onChange={handleChange} />
 
-                    <input type="text" name="lastName" placeholder="lastName" value={formData.lastName} onChange={handleChange} />
+                    <input type="text" name="lastName" placeholder="LastName" value={formData.lastName} onChange={handleChange} />
 
-                    <input type="email" name="email" placeholder="email" value={formData.email} onChange={handleChange} />
+                    <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
 
-                    <input type="password" name="password" placeholder="password" value={formData.password} onChange={handleChange} />
+                    <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} />
 
                     <button type="submit"> Signup </button>
                 </form>

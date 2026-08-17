@@ -1,84 +1,75 @@
-.login-page {
-    min-height: 100vh;
+/* Login-Page */
 
+.login-page {
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    gap: 10px;
+    line-height: 1.6;
     background: #0d0f13;
 }
 
 .login-page > h1 {
     margin: 0 0 22px;
-
-    font-size: 36px;
+    font-size: 52px;
     font-weight: 700;
-    letter-spacing: -1px;
-
+    letter-spacing: 1px;
     color: #f5f5f5;
+    text-transform: uppercase;
 }
 
 .login-container {
-    width: min(400px, 90%);
+    width: min(600px, 90%);
     padding: 30px;
-
     background: #15171d;
-    border: 1px solid #292c35;
-    border-radius: 15px;
-
+    border: 1px solid aliceblue;
+    border-radius: 16px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .login-container form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 18px;
+    line-height: 1.6;
 }
 
 .login-container input {
     width: 100%;
     box-sizing: border-box;
-
-    padding: 12px 13px;
-
+    padding: 12px 16px;
     background: #0d0f13;
     border: 1px solid #30333d;
-    border-radius: 8px;
-
+    border-radius: 12px;
     outline: none;
-
     color: #ffffff;
-    font-size: 14px;
+    font-size: 24px;
 }
 
 .login-container input::placeholder {
-    color: #687080;
+    color: #79859e;
 }
 
 .login-container input:focus {
-    border-color: #666b78;
+    border-color: #7c8291;
 }
 
 .login-container button {
     margin-top: 6px;
     padding: 12px;
-
     background: #eeeeee;
     color: #111318;
-
     border: none;
-    border-radius: 8px;
-
-    font-size: 14px;
+    border-radius: 12px;
+    font-size: 24px;
     font-weight: 600;
-
     cursor: pointer;
-
     transition: 0.2s ease;
 }
 
 .login-container button:hover {
     background: #ffffff;
-    transform: translateY(-1px);
+    transform: translateY(-3px);
 }
