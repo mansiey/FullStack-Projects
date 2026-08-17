@@ -112,8 +112,8 @@ Leaderboard entries display the player's rank, username, number of games, and sc
 
 ### Demo
 - Live App: <https://full-stack-projects-cyan.vercel.app/>
-- Demo Video: <DEMO_VIDEO_URL>
-- GitHub: <GITHUB_REPOSITORY_URL>
+- Demo Video: <https://www.loom.com/share/330f345dd9bd4e818c6c1ad1d0c07ffa>
+- GitHub: <https://github.com/mansiey/FullStack-Projects.git>
 
 ---
 ## Project Structure
