@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';    //React Router hook that lets JavaScript navigate to another route
+import './Signup.css';
 
 function Signup() {
     const [formData, setFormData] = useState({
@@ -23,8 +24,8 @@ function Signup() {
     async function handleSubmit(event) {
         event.preventDefault();
 
-        try{
-            const response = await fetch ("http://localhost:8080/auth/signup", {
+        try {
+            const response = await fetch("http://localhost:8080/auth/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -37,7 +38,7 @@ function Signup() {
             console.log("Status: ", response.status);
             console.log("Response: ", data);
 
-            if(response.ok) {
+            if (response.ok) {
                 navigate("/login");
             }
         } catch (error) {
@@ -48,20 +49,24 @@ function Signup() {
     }
 
     return (
-        <div>
+        <div className="signup-page">
             <h1> Signup </h1>
 
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="firstName" placeholder="firstName" value={formData.firstName} onChange={handleChange} />
-               
-                <input type="text" name="lastName" placeholder="lastName" value={formData.lastName} onChange={handleChange} />
-                
-                <input type="email" name="email" placeholder="email" value={formData.email} onChange={handleChange} />
+            <div className="signup-container">
 
-                <input type="password" name="password" placeholder="password" value={formData.password} onChange={handleChange} />
+                <form onSubmit={handleSubmit}>
+                    <input type="text" name="firstName" placeholder="firstName" value={formData.firstName} onChange={handleChange} />
 
-                <button type="submit"> Signup </button>
-            </form>
+                    <input type="text" name="lastName" placeholder="lastName" value={formData.lastName} onChange={handleChange} />
+
+                    <input type="email" name="email" placeholder="email" value={formData.email} onChange={handleChange} />
+
+                    <input type="password" name="password" placeholder="password" value={formData.password} onChange={handleChange} />
+
+                    <button type="submit"> Signup </button>
+                </form>
+
+            </div>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';    //React Router hook that lets JavaScript navigate to another route
 import { useAuth } from "../context/authContext";
+import './Login.css';
 
 function Login() {
     const [formData, setFormData] = useState({
@@ -23,8 +24,8 @@ function Login() {
     async function handleSubmit(event) {
         event.preventDefault();
 
-        try{
-            const response = await fetch ("http://localhost:8080/auth/signin", {
+        try {
+            const response = await fetch("http://localhost:8080/auth/signin", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -36,7 +37,7 @@ function Login() {
             console.log("Status: ", response.status);
             console.log("Response: ", data);
 
-            if(response.ok) {
+            if (response.ok) {
                 const token = data.data.token;
                 login(token);
 
@@ -50,16 +51,18 @@ function Login() {
     }
 
     return (
-        <div>
+        <div className="login-page">
             <h1> Login </h1>
 
-            <form onSubmit={handleSubmit}>
-                <input type="email" name="email" placeholder="email" value={formData.email} onChange={handleChange} />
+            <div className="login-container">
+                <form onSubmit={handleSubmit}>
+                    <input type="email" name="email" placeholder="email" value={formData.email} onChange={handleChange} />
 
-                <input type="password" name="password" placeholder="password" value={formData.password} onChange={handleChange} />
+                    <input type="password" name="password" placeholder="password" value={formData.password} onChange={handleChange} />
 
-                <button type="submit"> Login </button>
-            </form>
+                    <button type="submit"> Login </button>
+                </form>
+            </div>
         </div>
     )
 }

@@ -5,35 +5,40 @@ import Signup from './pages/Signup';
 import Games from './pages/Games';
 import Leaderboards from './pages/Leaderboards';
 import Profile from './pages/Profile';
+import Home from './pages/Home';
+import Navbar from './components/navbar';
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
+
       <Routes>
-        <Route path='/' element={<h1>ClickRush</h1>} />
+          <Route path='/' element={<Home />} />
 
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/login' element={<Login />} />
 
-        <Route path='/games' element={
-          <ProtectedRoute>
-            <Games />
-          </ProtectedRoute>
-        } />
+          <Route path='/games' element={
+            <ProtectedRoute>
+              <Games />
+            </ProtectedRoute>
+          } />
 
-        <Route path='/profile' element={
-          <ProtectedRoute>
-            <Profile />
-          </ProtectedRoute>
-        } />
-        
-        <Route path='/leaderboard' element={
-          <ProtectedRoute>
-            <Leaderboards />
-          </ProtectedRoute>
-        } />
+          <Route path='/profile' element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          } />
 
+          <Route path='/leaderboard' element={
+            <ProtectedRoute>
+              <Leaderboards />
+            </ProtectedRoute>
+          } />
       </Routes>
+
+      
     </BrowserRouter>
   )
 }

@@ -1,0 +1,241 @@
+/* =========================
+   LEADERBOARDS PAGE
+========================= */
+
+.leaderboards-page {
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    width: min(900px, 92%);
+    margin: 0 auto;
+
+    padding: 45px 0 60px;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.leaderboards-page>h1 {
+    margin: 0 0 35px;
+
+    text-align: center;
+
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -1px;
+
+    color: #f5f5f5;
+}
+
+
+/* =========================
+   LEADERBOARD SECTION
+========================= */
+
+.leaderboard-section {
+    margin-bottom: 30px;
+
+    background: #15171d;
+    border: 1px solid #292c35;
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.leaderboard-section h2 {
+    margin: 0;
+    padding: 17px 20px;
+
+    background: #181a20;
+    border-bottom: 1px solid #292c35;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    color: #eeeeee;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.leaderboard-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.leaderboard-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+.leaderboard-table thead {
+    background: #111318;
+}
+
+.leaderboard-table th {
+    padding: 12px 18px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+
+    color: #777d8c;
+}
+
+
+/* =========================
+   TABLE ROWS
+========================= */
+
+.leaderboard-table tbody tr {
+    border-top: 1px solid #252832;
+
+    transition: background 0.15s ease;
+}
+
+.leaderboard-table tbody tr:hover {
+    background: #1b1d23;
+}
+
+.leaderboard-table td {
+    padding: 14px 18px;
+
+    color: #aeb2bd;
+}
+
+.leaderboard-table th:not(:last-child),
+.leaderboard-table td:not(:last-child) {
+    border-right: 1px solid #252832;
+}
+
+
+/* =========================
+   RANK
+========================= */
+
+.leaderboard-table .rank {
+    width: 70px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    color: #e8e9ed;
+}
+
+
+/* =========================
+   USERNAME
+========================= */
+
+.leaderboard-table .username {
+    font-weight: 600;
+
+    color: #eeeeee;
+}
+
+
+/* =========================
+   SCORE
+========================= */
+
+.leaderboard-table .score {
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-leaderboard {
+    margin: 0;
+    padding: 25px 20px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #777d8c;
+}
+
+
+/* =========================
+   TOP 3
+========================= */
+
+.leaderboard-table tbody tr:nth-child(1) .rank {
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.leaderboard-table tbody tr:nth-child(2) .rank {
+    color: #c8cbd3;
+}
+
+.leaderboard-table tbody tr:nth-child(3) .rank {
+    color: #a7aab3;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .leaderboards-page {
+        width: 94%;
+        padding: 30px 0 40px;
+    }
+
+    .leaderboards-page>h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .leaderboard-section {
+        margin-bottom: 20px;
+    }
+
+    .leaderboard-section h2 {
+        padding: 14px 15px;
+        font-size: 15px;
+    }
+
+    .leaderboard-table {
+        min-width: 500px;
+    }
+
+    .leaderboard-table th,
+    .leaderboard-table td {
+        padding: 12px 14px;
+    }
+
+    
+}

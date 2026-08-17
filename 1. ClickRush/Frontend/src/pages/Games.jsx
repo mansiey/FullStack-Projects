@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../context/authContext";
+import './Games.css';
 
 function Games() {
     const [score, setScore] = useState(0);
@@ -93,53 +94,51 @@ function Games() {
     }
 
     return (
-        <div>
-            <h1>ClickRush</h1>
+        <div className="games-page">
 
-            <h2>Score: {score}</h2>
+    <h1>ClickRush</h1>
 
-            <h2>Time: {timeLeft}s</h2>
-
-            {gameOver && <h2>Game Over!</h2>}
-
-            <button onClick={startGame}>
-                {gameStarted ? "Restart Game" : gameOver ? "Play Again" : "Start Game"}
-            </button>
-
-            {gameStarted && (
-                <button onClick={cancelGame}>
-                    Cancel Game  
-                </button>
-            )}
-
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(4, 80px)",
-                    gap: "10px",
-                    marginTop: "30px"
-                }}
-            >
-                {cells.map((index) => (
-                    <button
-                        key={index}
-                        onClick={() => handleCellClick(index)}
-                        style={{
-                            width: "80px",
-                            height: "80px",
-                            backgroundColor:
-                                index === activeCell && gameStarted
-                                    ? "red"
-                                    : "lightgray",
-                            border: "1px solid black",
-                            cursor: gameStarted ? "pointer" : "default"
-                        }}
-                    >
-                        {index + 1}
-                    </button>
-                ))}
-            </div>
+    <div className="game-hud">
+        <div className="game-stat">
+            <span>Score</span>
+            <strong>{score}</strong>
         </div>
+
+        <div className="game-stat">
+            <span>Time</span>
+            <strong>{timeLeft}s</strong>
+        </div>
+    </div>
+
+    {gameOver && <h2 className="game-over">Game Over!</h2>}
+
+    <div className="game-controls">
+        <button onClick={startGame} className="start-button">
+            {gameStarted ? "Restart Game" : gameOver ? "Play Again" : "Start Game"}
+        </button>
+
+        {gameStarted && (
+            <button onClick={cancelGame} className="cancel-button">
+                Cancel Game
+            </button>
+        )}
+    </div>
+
+    <div className="game-grid">
+        {cells.map((index) => (
+            <button
+                key={index}
+                onClick={() => handleCellClick(index)}
+                className={`game-cell ${
+                    index === activeCell && gameStarted ? "active-cell" : ""
+                }`}
+            >
+                {index + 1}
+            </button>
+        ))}
+    </div>
+
+</div>
     );
 }
 

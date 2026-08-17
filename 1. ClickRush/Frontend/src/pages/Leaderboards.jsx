@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../context/authContext";
+import './Leaderboards.css';
 
 function Leaderboards() {
     const [daily, setDaily] = useState([]);
@@ -57,40 +58,53 @@ function Leaderboards() {
 
     function renderLeaderboard(title, leaderboard) {
         return (
-            <section>
+            <section className="leaderboard-section">
+
                 <h2>{title}</h2>
 
                 {leaderboard.length === 0 ? (
-                    <p>No games played yet.</p>
+                    <p className="empty-leaderboard">
+                        No games played yet.
+                    </p>
                 ) : (
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Username</th>
-                                <th>Games</th>
-                                <th>Score</th>
-                            </tr>
-                        </thead>
+                    <div className="leaderboard-table-wrapper">
+                        <table className="leaderboard-table">
 
-                        <tbody>
-                            {leaderboard.map((user) => (
-                                <tr key={user.rank}>
-                                    <td>{user.rank}</td>
-                                    <td>{user.displayName}</td>
-                                    <td>{user.totalGames}</td>
-                                    <td>{user.totalScore}</td>
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Username</th>
+                                    <th>Games</th>
+                                    <th>Score</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            </thead>
+
+                            <tbody>
+                                {leaderboard.map((user) => (
+                                    <tr key={user.rank}>
+                                        <td className="rank">{user.rank}</td>
+                                        <td className="username">
+                                            {user.displayName}
+                                        </td>
+                                        <td>{user.totalGames}</td>
+                                        <td className="score">
+                                            {user.totalScore}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+
+                        </table>
+                    </div>
                 )}
+
             </section>
         );
     }
 
     return (
-        <div>
+        <div className="leaderboards-page">
+
             <h1>Leaderboards</h1>
 
             {renderLeaderboard("Daily", daily)}
@@ -98,6 +112,7 @@ function Leaderboards() {
             {renderLeaderboard("Weekly", weekly)}
 
             {renderLeaderboard("Global", global)}
+
         </div>
     );
 }

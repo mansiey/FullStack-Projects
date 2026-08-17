@@ -1,0 +1,140 @@
+/* =========================
+   SIGNUP PAGE
+========================= */
+
+.signup-page {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #0d0f13;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.signup-page > h1 {
+    margin: 0 0 22px;
+
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -1px;
+
+    color: #f5f5f5;
+}
+
+
+/* =========================
+   SIGNUP CARD
+========================= */
+
+.signup-container {
+    width: min(400px, 90%);
+    padding: 30px;
+
+    background: #15171d;
+
+    border: 1px solid #292c35;
+    border-radius: 15px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.signup-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.signup-container input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 13px;
+
+    background: #0d0f13;
+    border: 1px solid #30333d;
+    border-radius: 8px;
+
+    outline: none;
+
+    color: #ffffff;
+    font-size: 14px;
+
+    transition: border-color 0.2s ease;
+}
+
+.signup-container input::placeholder {
+    color: #687080;
+}
+
+.signup-container input:focus {
+    border-color: #666b78;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.signup-container button {
+    margin-top: 6px;
+
+    padding: 12px;
+
+    background: #eeeeee;
+    color: #111318;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.signup-container button:hover {
+    background: #ffffff;
+    transform: translateY(-1px);
+}
+
+.signup-container button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 450px) {
+
+    .signup-page > h1 {
+        font-size: 30px;
+        margin-bottom: 18px;
+    }
+
+    .signup-container {
+        padding: 24px 20px;
+    }
+}
