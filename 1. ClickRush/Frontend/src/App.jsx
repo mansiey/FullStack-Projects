@@ -6,7 +6,7 @@ import Games from './pages/Games';
 import Leaderboards from './pages/Leaderboards';
 import Profile from './pages/Profile';
 import Home from './pages/Home';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
