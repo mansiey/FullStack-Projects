@@ -1,11 +1,17 @@
 import JWT from 'jsonwebtoken';
 
+
 export interface userTokenPayload {
     id: string
 }
 
-const JWT_SECRET = 'myjwtsecret';
-export function createUserToken(payload: userTokenPayload) {
+const JWT_SECRET:string = process.env.JWT_SECRET!;
+
+if (!JWT_SECRET) {
+    throw new Error("JWT_SECRET is not defined");
+}
+
+export function createUserToken(payload: userTokenPayload){
     const token = JWT.sign(payload, JWT_SECRET, {
         expiresIn: "24h"
     });
