@@ -6,23 +6,21 @@ function Home() {
 
     return (
         <div className="home-page">
-
-            {/* Hero */}
             <section className="home-hero">
 
-                <p className="home-eyebrow">
+                <h3 className="home-eyebrow">
                     TEST YOUR SPEED
-                </p>
+                </h3>
 
                 <h1>ClickRush</h1>
 
-                <p className="home-tagline">
+                <h3 className="home-tagline">
                     How fast can you click?
-                </p>
+                </h3>
 
-                <p className="home-description">
+                <h3 className="home-description">
                     Click the target. Beat the clock. Chase your high score.
-                </p>
+                </h3>
 
                 <div className="home-actions">
                     <button
@@ -43,9 +41,7 @@ function Home() {
             </section>
 
 
-            {/* Game Information */}
             <section className="home-info">
-
                 <div className="home-info-card">
                     <strong>60s</strong>
                     <span>Game Time</span>
@@ -64,10 +60,9 @@ function Home() {
             </section>
 
 
-            {/* Bottom Message */}
-            <p className="home-footer">
+            <h3 className="home-footer">
                 Fast. Simple. Competitive.
-            </p>
+            </h3>
 
         </div>
     );
