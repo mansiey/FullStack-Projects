@@ -2,12 +2,11 @@
 
 
 .profile-page {
-    min-height: 80vh;
+    min-height: 100vh;
     width: 70%;
     margin: 40px auto;
     padding: 28px 32px 35px;
-    background: #111318;
-    border: 1px solid #252832;
+    padding-top: 150px;
     border-radius: 16px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
     line-height: 1.6;

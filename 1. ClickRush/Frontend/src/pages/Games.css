@@ -14,12 +14,13 @@ body {
 
 
 .games-page {
-    min-height: 80vh;
+    min-height: 100vh;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 45px 20px;
+    padding-top: 150px;
     line-height: 1.6;
     background:
         radial-gradient(
