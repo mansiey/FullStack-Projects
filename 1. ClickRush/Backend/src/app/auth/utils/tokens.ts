@@ -6,7 +6,9 @@ export interface userTokenPayload {
 
 const JWT_SECRET = 'myjwtsecret';
 export function createUserToken(payload: userTokenPayload) {
-    const token = JWT.sign(payload, JWT_SECRET);
+    const token = JWT.sign(payload, JWT_SECRET, {
+        expiresIn: "24h"
+    });
     return token;
 }
 

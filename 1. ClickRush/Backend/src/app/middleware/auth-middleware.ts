@@ -7,7 +7,7 @@ export function authMiddleware() {
         const header = req.headers['authorization'];
         if(!header) return next();
 
-        if(!header?.startsWith('Bearer')){
+        if(!header?.startsWith("Bearer " )){
             return res.status(400).json({error: "The header must start with Bearer!"});
         }
 
