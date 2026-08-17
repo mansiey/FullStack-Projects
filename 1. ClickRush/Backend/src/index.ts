@@ -5,7 +5,7 @@ import 'dotenv/config';
 async function main() {
     try{
         const server = createServer(createApplication());
-        const PORT:number = 8080;
+        const PORT:number = Number(process.env.PORT) || 8080;
 
         server.listen(PORT, () => {
             console.log(`Server is running on PORT ${PORT}`);
